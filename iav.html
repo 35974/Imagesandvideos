@@ -4,6 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>       
+     button:hover {
+            background-color: lightgray;
+            cursor: pointer;
+        }
+        button {
+            transition: background-color 150ms ease;
+        }
+        .orange-card {
+            box-shadow: 10px 10px 15px rgba(0,0,0,0.7);
+            transition: box-shadow 220ms ease, transform 220ms ease;
+        }
+        .orange-card:hover {
+            box-shadow: 0 20px 50px rgba(255,165,0,0.95), 0 0 60px rgba(255,140,0,0.45) !important;
+            transform: translateY(-3px);
+        }
+        .orange-card .iframe-wrapper iframe {
+            transition: filter 220ms ease;
+            filter: brightness(0.75);
+        }
+        .orange-card:hover .iframe-wrapper iframe {
+            filter: brightness(1);
+        }
+        /* Section title shadow styling */
+        .section-title {
+            display: inline-block;
+            padding: 6px 12px;
+            border-radius: 6px;
+            background: rgba(255,255,255,0.03);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.45);
+            text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+            font-size: 50px;
+        }
+        .section-title:hover {
+            box-shadow: 0 18px 40px rgba(0,0,0,0.6), 0 0 30px rgba(255,255,255,0.06) inset;
+            transform: translateY(-2px);
+        }
+    </style>
 </head>
 <body>
         <div style="background: green; width: 100%; text-align: center; padding: 40px 0;">
@@ -27,9 +65,9 @@
         <div style="
         font-size: 50px;">Halfs</div>
     </div>
-<div style="background: orange; width:20%; float: left; text-align: center;padding: 400px 0;box-shadow: 10px 10px 5px grey;">
- <div style="position:relative; padding-top:56.25%; /* 16:9 ratio */ width:100%; height: 500px;">
-  <iframe
+<div class="orange-card" style="background: orange; width:20%; float: left; text-align: center; padding: 400px 0;">
+ <div class="iframe-wrapper" style="position:relative; padding-top:56.25%; /* 16:9 ratio */ width:100%; height: 500px;">
+       <iframe
     src="https://www.youtube.com/embed/Z_T0o5uNrlY"
     title="YouTube video player"
     style="position:absolute; top:0; left:0; width:100%; height:100%; border:0;"
@@ -37,13 +75,13 @@
     allowfullscreen
     loading="lazy">
   </iframe>
+      
 </div>
     <div style="
     font-size: 50px;">section1</div>
 </div>
     <div style="background: purple; width: 25%; text-align: center;padding: 250px 0; float: left; background-image: url(https://i.pinimg.com/originals/38/00/a2/3800a2abf5b24d7fed02ad0db11dc30e.jpg);background-repeat: no-repeat;background-size: cover;clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);selector {box-shadow: h-offset v-offset blur spread color inset;};">
-        <div style="
-        font-size: 50px;">section2</div>
+    <div class="section-title">section2</div>
     </div>
     <div style="background: yellow; width:20%; float: left; text-align: center;padding: 200px 0;background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/dbf11371-64c5-4bbc-ae69-9e745fd05ee0/dgd446u-56ce9317-d842-4c86-ae6c-8e3dbcafbdad.png/v1/fill/w_783,h_1020/_c4d_fnaf__glamrock_bonnie_recreation_render_by_fredd2055_dgd446u-pre.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MjQ5OSIsInBhdGgiOiJcL2ZcL2RiZjExMzcxLTY0YzUtNGJiYy1hZTY5LTllNzQ1ZmQwNWVlMFwvZGdkNDQ2dS01NmNlOTMxNy1kODQyLTRjODYtYWU2Yy04ZTNkYmNhZmJkYWQucG5nIiwid2lkdGgiOiI8PTE5MjAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.XBeKF3llEQl5f0_pqiOS6pm2JELjKVxs1sGIzMfmCMo);background-repeat: no-repeat;background-size: cover;clip-path: circle(50% at 50% 50%);border: 5px solid rgb(40, 92, 6)">
         <div style="
